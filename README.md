@@ -7,7 +7,7 @@
 ### Технологии
 Python 3.8
 
-Django 2.2.19
+Django 2.2.20
 
 Docker
 
