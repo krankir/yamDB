@@ -1,15 +1,15 @@
 version: '3.8'
 
 services:
-    
+
     db:
         image: postgres:13.0-alpine
         volumes:
-            - postgres_data:/var/lib/postgresql/data/
+            - /var/lib/postgresql/data/
         env_file:
             - ./.env
     web:
-        build: krankir/api_yamdb:latest
+        image: krankir/api_yamdb:latest
         restart: always
         volumes:
             - static_value:/app/static/
