@@ -1,9 +1,5 @@
 version: '3.8'
 
-volumes:
-    postgres_data:
-    static:
-
 services:
 
     db:
@@ -32,3 +28,7 @@ services:
             - "80:80"
         depends_on:
             - web
+
+volumes:
+    postgres_data:
+    static:
