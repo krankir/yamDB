@@ -1,8 +1,10 @@
 # YaMDb
-![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=master)
+![example workflow](https://github.com/krankir/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 ## Описание
 Проект YaMDb собирает отзывы пользователей на произведения. 
 Произведения делятся на категории: "Книги", "Фильмы", "Музыка". Читатели оставляют к произведениям отзывы и выставляют произведению рейтинг.
+
+![Проект развернут по адресу:](http://51.250.85.113/redoc/)
 
 ### Технологии
 Python 3.8
