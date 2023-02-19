@@ -1,5 +1,5 @@
 # YaMDb
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![example branch parameter](https://github.com/github/docs/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)
 ## Описание
 Проект YaMDb собирает отзывы пользователей на произведения. 
 Произведения делятся на категории: "Книги", "Фильмы", "Музыка". Читатели оставляют к произведениям отзывы и выставляют произведению рейтинг.
