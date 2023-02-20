@@ -13,7 +13,7 @@ def get_env_value(env_variable):
 
 SECRET_KEY = get_env_value('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG', default='False')
+DEBUG = os.getenv('DEBUG', default=False)
 
 ALLOWED_HOSTS = ['*']
 
