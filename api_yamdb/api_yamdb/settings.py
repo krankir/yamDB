@@ -10,8 +10,7 @@ def get_env_value(env_variable):
     try:
         return os.environ[env_variable]
     except KeyError:
-        error_msg = 'Set default variable'
-        raise ImproperlyConfigured(error_msg)
+        return 'my_mega_secret_code_ilz@4zqj=rq&agdo'
 
 
 SECRET_KEY = get_env_value('SECRET_KEY')
