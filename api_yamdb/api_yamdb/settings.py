@@ -3,9 +3,17 @@ from datetime import timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = os.environ.get('SECRET_KEY', default='123-qwe-asd-zxc')
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+def get_env_value(env_variable):
+    try:
+        return os.environ[env_variable]
+    except KeyError:
+        error_msg = 'Set default variable'
+        raise ImproperlyConfigured(error_msg)
+
+
+SECRET_KEY = get_env_value('SECRET_KEY')
+
+DEBUG = os.getenv('DEBUG', default='False')
 
 ALLOWED_HOSTS = ['*']
 
