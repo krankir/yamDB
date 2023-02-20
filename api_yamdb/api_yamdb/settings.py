@@ -1,7 +1,10 @@
 import os
 from datetime import timedelta
 
+from django.core.exceptions import ImproperlyConfigured
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 def get_env_value(env_variable):
     try:
