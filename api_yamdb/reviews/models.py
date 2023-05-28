@@ -7,6 +7,7 @@ from .validators import validate_username, validate_year
 
 class User(AbstractUser):
     """Кастомная модель пользователя"""
+    
     ADMIN = 'admin'
     MODERATOR = 'moderator'
     USER = 'user'
@@ -51,6 +52,7 @@ class User(AbstractUser):
 
 class Category(models.Model):
     """Модель категории"""
+    
     name = models.CharField(
         max_length=256,
         verbose_name='Название',
@@ -78,6 +80,7 @@ class Category(models.Model):
 
 class Genre(models.Model):
     """Модель жанр"""
+    
     name = models.CharField(
         max_length=256,
         verbose_name='Название',
@@ -105,6 +108,7 @@ class Genre(models.Model):
 
 class Title(models.Model):
     """Модель произведения"""
+    
     name = models.CharField(
         max_length=200,
         verbose_name='Название произведения',
@@ -150,6 +154,7 @@ class Title(models.Model):
 
 class GenreTitle(models.Model):
     """Связующая модель жанра и произведения."""
+    
     genre = models.ForeignKey(
         Genre, null=True, on_delete=models.CASCADE, verbose_name='Жанр'
     )
@@ -163,6 +168,7 @@ class GenreTitle(models.Model):
 
 class Review(models.Model):
     """Модель отклика."""
+    
     title = models.ForeignKey(
         Title,
         on_delete=models.CASCADE,
@@ -206,6 +212,7 @@ class Review(models.Model):
 
 class Comment(models.Model):
     """Модель комментария."""
+    
     text = models.TextField(
         verbose_name='Текст комментария',
         help_text='Введите текст комментария',
